@@ -2,9 +2,9 @@
 
 <h1>Tasks</h1>
 
-<br>
-
-<%= link_to 'New Task', new_task_path %>
+<div class="class-form">
+  <%= render 'form', task: @task %>
+</div>
 
 <table>
   <thead>
@@ -16,9 +16,9 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="task_items">
     <% @tasks.each do |task| %>
-      <%= render task%>
+      <%= render task %>
     <% end %>
   </tbody>
 </table>
