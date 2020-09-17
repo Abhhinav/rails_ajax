@@ -1,0 +1,5 @@
+document.querySelector("#<%= dom_id(@task) %>")
+        .innerHTML = "<%= j render @task %>";
+
+
+toastr.success("Updated!");       
